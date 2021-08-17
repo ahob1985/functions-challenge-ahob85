@@ -22,7 +22,11 @@ public class FunctionsChallenge
      *******************************************************************************/
 
     public static int sumDouble(int a, int b) {
-
+        if(a == b) {
+            return (a + b) * 2;
+        } else {
+            return a + b;
+        }
     }
 
     /******************************************************************************
@@ -39,7 +43,7 @@ public class FunctionsChallenge
      *******************************************************************************/
 
     public static boolean makes10(int a, int b) {
- 
+        return a == 10 || b == 10 || a + b == 10;
     }
 
     /******************************************************************************
@@ -58,7 +62,7 @@ public class FunctionsChallenge
      *******************************************************************************/
 
     public static boolean parrotTrouble(boolean talking, int hour) {
-
+        return talking && (hour < 7 || hour > 20);
     }
 
     /******************************************************************************
@@ -78,7 +82,19 @@ public class FunctionsChallenge
      *******************************************************************************/
 
     public static String alarmClock(int day, boolean vacation) {
-
+        if(day >= 1 && day <= 5) {
+            if(vacation) {
+                return "10:00";
+            } else {
+                return "7:00";
+            }
+        } else {
+            if(vacation) {
+                return "off";
+            } else {
+                return "10:00";
+            }
+        }
     }
 
     /******************************************************************************
@@ -99,6 +115,15 @@ public class FunctionsChallenge
      *******************************************************************************/
 
     public static int caughtSpeeding(int speed, boolean isBirthday) {
-
+        if(isBirthday) {
+            speed -= 5;
+        }
+        if(speed <= 60) {
+            return 0;
+        } else if(speed >= 61 && speed <= 80) {
+            return 1;
+        } else {
+            return 2;
+        }
     }
 }
