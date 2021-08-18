@@ -1,7 +1,7 @@
 {
   "tests": [
     {
-      "name": "TestFunctionsChallenge",
+      "name": "FunctionsChallengeTest",
       "setup": "",
       "run": "gradle test",
       "input": "",
